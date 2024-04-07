@@ -1,8 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Headernav from './components/headercomp/headernav'
-import Sidenav from './components/sidenavcomp/sidenav'
-
+import Homepage from './pages/homepags'
 
 const App = () => {
     return (
@@ -10,8 +8,7 @@ const App = () => {
         <React.Fragment>
             <Router>
                 <Routes>
-                    <Route path='/' element={<Headernav />} />
-                    <Route path='/sidenav' element={<Sidenav />} />
+                    <Route path='/' element={<Homepage />} />
                 </Routes>
             </Router>
 

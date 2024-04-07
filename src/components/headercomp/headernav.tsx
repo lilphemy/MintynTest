@@ -3,7 +3,7 @@
 
 const Headernav = () => {
   return (
-    <nav className = "bg-white-400 flex flex-row justify-between shadow-lg">
+    <nav className = " py-5 bg-white-400 flex flex-row justify-between shadow-lg">
         <h1 className='text-blue-600 text-3xl font-bold font-mono'>TransMonitor</h1>
         <div>
             <input type="search" name="search" id="" placeholder={` search here`} />
