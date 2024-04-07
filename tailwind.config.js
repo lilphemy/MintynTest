@@ -6,6 +6,7 @@ export default {
     "./src/components/headercomp/headernav.tsx",
     "./src/components/paymentcomp/payments.tsx",
     "./src/components/statisticstrend/headerstat.tsx",
+    "./src/components/statisticstrend/statistics.tsx",
     "./src/pages/homepags.tsx",
   ],
   theme: {
