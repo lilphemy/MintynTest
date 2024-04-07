@@ -46,10 +46,9 @@ const Payments = ():JSX.Element => {
         pageRenderer(setupInfo.startCount, setupInfo.endCount)
     }, [setupInfo.startCount, setupInfo.endCount])
 
-    
     return (
         <React.Fragment>
-            <section className='right-0 w-10/12 mx-10 my-5'>
+            <section className='right-0 w-full my-5'>
                 <h2 className='text-3xl font-bold my-5'>Payments</h2>
                 <div className="w-full flex justify-between">
                     <label>

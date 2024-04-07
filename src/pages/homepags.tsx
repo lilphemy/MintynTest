@@ -2,6 +2,7 @@ import React from 'react'
 import Headernav from '../components/headercomp/headernav'
 import Sidenav from '../components/sidenavcomp/sidenav'
 import Payments from '../components/paymentcomp/payments'
+import Headerstat from '../components/statisticstrend/headerstat'
 
 const Homepage = () => {
 
@@ -15,6 +16,7 @@ const Homepage = () => {
                     <Sidenav />
                 </div>
                 <div className='w-9/12 h-fit mx-5 relative'>
+                    <Headerstat/>
                     <Payments />
                 </div>
             </div>
