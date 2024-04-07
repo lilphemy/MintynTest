@@ -24,6 +24,8 @@ type PlotLayout = {
   yaxis: {
     title: string,
   },
+  width: number,
+  height: number,
 }
 
 const Statistics: React.FC = () => {
@@ -45,7 +47,9 @@ const Statistics: React.FC = () => {
   const layout: PlotLayout = {
     title: "sales value chart",
     xaxis: { title: " months of sales" },
-    yaxis: { title: "values of sales" }
+    yaxis: { title: "values of sales" },
+    width: 800,
+    height: 400,
   }
 
   //const layout: PlotLayout = { width: 900, height: 500, title: "sales revenue during the month" }
@@ -68,9 +72,9 @@ const Statistics: React.FC = () => {
         <div className='flex w-full'>
           <div className='w-11/12 flex flex-col'>
             < div className='flex w-full justify-between' >
-              <h2>Today: 7 march, 2024</h2>
+              <h2 className='font-bold text-xl'>Today: 7 march, 2024</h2>
               <div>
-                <select>
+                <select className='outline-none border-2 border-blue-500 font-mono text-lg bg-indigo-200 rounded-lg w-32 text-'>
                   <option>first</option>
                   <option>second</option>
                   <option>third</option>
@@ -78,21 +82,21 @@ const Statistics: React.FC = () => {
                 </select>
               </div>
               <div className='flex'>
-                <FontAwesomeIcon className="mx-1 text-lg border-2 border-slate-300 text-slate-300" icon={faArrowCircleLeft} />
-                <FontAwesomeIcon className="mx-1 text-lg border-2 border-slate-300 text-slate-300" icon={faArrowCircleRight} />
+                <FontAwesomeIcon className="mx-1 text-lg border-2 border-slate-300 text-slate-300 w-12 p-2" icon={faArrowCircleLeft} />
+                <FontAwesomeIcon className="mx-1 text-lg border-2 border-slate-300 text-slate-300 w-12 p-2" icon={faArrowCircleRight} />
               </div>
             </div >
-            <Plot data={data} layout={layout} />
+            <Plot className = "mx-10" data={data} layout={layout} />
           </div>
-          <div className='flex flex-col justify-evenly w-full'>
-            <div className='bg-white shadow-md h-42 bg-slate-200 w-full p-2 flex flex-col'>
+          <div className='flex flex-col justify-between w-full ml-5'>
+            <div className='bg-white shadow-md h-48 bg-slate-200 w-full flex flex-col px-5 py-1'>
               <label htmlFor="file" className='font-bold text-xl my-1'>Order</label>
               <progress className="w-11/12 my-1 h-2" value={80} max={100}></progress>
               <p className='font-sans py-1'>Pending Orders: 20</p>
               <p className='font-sans py-1'>Reconciled Orders: 80</p>
               <p className='font-sans py-1'>Total Orders: 100</p>
             </div>
-            <div className='bg-white shadow-md h-42 bg-slate-200 w-full p-2 flex flex-col'>
+            <div className='bg-white shadow-md h-48 bg-slate-200 w-full flex flex-col px-5 py-1'>
               <label htmlFor="file" className='font-bold text-xl my-1'>Payments</label>
               <progress className="w-11/12 my-1 h-2" value={80} max={100}></progress>
               <p className='font-sans py-1'>Pending Payments: 20</p>

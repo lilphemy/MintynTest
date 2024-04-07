@@ -11,12 +11,11 @@ const Homepage = () => {
             <div>
                 <Headernav />
             </div>
-            <div className=' w-full h-full flex justify-between mb-5'>
-                <div className='w-2/12 h-screen'>
-                    <Sidenav />
-                </div>
-                <div className='w-9/12 h-fit mx-5'>
-                    <Statistics/>
+            <div className=' w-full flex justify-between mb-5 relative'>
+                <Sidenav />
+                
+                <div className='w-9/12 h-fit ml-80 relative'>
+                    <Statistics />
                     <Payments />
                 </div>
             </div>

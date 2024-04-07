@@ -117,9 +117,9 @@ const Payments = ():JSX.Element => {
 
                 <div className='flex justify-between my-5'>
                     <div>{`showing ${setupInfo.startCount} to ${setupInfo.endCount} of ${nameData.length} entries`}</div>
-                    <div>
-                        <button onClick={handlePrev}>Previous</button>
-                        <button onClick={handleNext}>Next</button>
+                    <div className='w-40 flex justify-between'>
+                        <button className = "border-2 border-slate-300 p-2 rounded-md text-blue-400 font-bold" onClick={handlePrev}>Previous</button>
+                        <button className = "border-2 border-slate-300 p-2 rounded-md text-blue-400 font-bold" onClick={handleNext}>Next</button>
                     </div>
                 </div>
 
