@@ -5,13 +5,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 //const pageView = 10;
-
+type newType = {
+    mainData: wholeType[],
+    smallView: wholeType[],
+    currentPage: number,
+    startCount: number,
+    endCount: number
+}
 
 const Payments = ():JSX.Element => {
 
-    const [setupInfo, setSetupInfo] = useState({
+    const [setupInfo, setSetupInfo] = useState<newType>({
         mainData: nameData,
-        smallView: null,
+        smallView: [],
         currentPage: 1,
         startCount: 0,
         endCount: 10,
@@ -39,6 +45,7 @@ const Payments = ():JSX.Element => {
 
     function pageRenderer (startValue:number, endValue:number) {
         let newView = nameData.slice(startValue, endValue)
+        console.log(newView)
         setSetupInfo({...setupInfo, smallView: newView})
     }
 

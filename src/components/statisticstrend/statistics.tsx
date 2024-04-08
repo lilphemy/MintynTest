@@ -1,5 +1,6 @@
 import React from 'react'
 import Plot from 'react-plotly.js'
+import Plotly from 'plotly.js'
 import Headerstat from './headerstat'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons/faArrowCircleLeft'
@@ -13,8 +14,7 @@ type PlotData = {
   type: string,
   mode: string,
   name: string,
-  stackgroup: string
-}
+}[]
 
 type PlotLayout = {
   title: string,
@@ -33,7 +33,7 @@ const Statistics: React.FC = () => {
   const xBox = ["jan", "feb", "march", "april", "may"];
   const yBox = [[400, 500, 100, 120, 330,], [300, 420, 510, 230, 200], [600, 300, 100, 440, 320], [200, 300, 200, 300, 500]];
 
-  const data: PlotData = yBox.map((units, index) => {
+  const data: Plotly.Data[] = yBox.map((units, index) => {
     return {
       x: xBox,
       y: units,
