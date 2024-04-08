@@ -15,6 +15,8 @@ type newType = {
 
 const Payments = ():JSX.Element => {
 
+    const pickColors = ["red", "green", "yellow", "blue", "orange"]
+    
     const [setupInfo, setSetupInfo] = useState<newType>({
         mainData: nameData,
         smallView: [],
@@ -97,18 +99,18 @@ const Payments = ():JSX.Element => {
                     </thead>
 
                     <tbody>
-                        {setupInfo.smallView?.map((unitdata: wholeType) => {
+                        {setupInfo.smallView?.map((unitdata: wholeType, index: number) => {
                             const { id, profile: { dob, name, company, location } } = unitdata;
                             let dateTime = new Date(dob)
 
                             return (
                                 <React.Fragment>
-                                    <tr key={id} className='centre border-2 border-slate-300'>
+                                    <tr key={index} className='centre border-2 border-slate-300'>
                                         <td className='py-2 '>{name}</td>
                                         <td className='py-2 '>{location.lat}</td>
                                         <td className='py-2 '>{ location.long}</td>
                                         <td className='py-2 '>{dateTime.getFullYear()}</td>
-                                        <td className='py-2 '>{company}</td>
+                                        <td className='py-2 '><div className='p-0.5 text-center border-2 border-green-400 rounded-2xl w-1/2'>{company}</div></td>
                                         <td className='py-2 '><FontAwesomeIcon icon = {faCaretDown}/></td>
                                     </tr>
                                 </React.Fragment>

@@ -40,7 +40,7 @@ const Sidenav = () => {
 
                 </div>
                 <div className='my-10 w-full'>
-                    <span className='w-full hover:bg-blue-100 my-8 font-mono text-xs py-2'><Link to="/"><FontAwesomeIcon className='text-blue-200 mx-10' icon={faUser} />Manual Settlement</Link></span>
+                    <div className='w-full hover:bg-blue-100 font-mono text-xs py-2'><Link to="/"><FontAwesomeIcon className='text-blue-200 mx-10' icon={faUser} />Manual Settlement</Link></div>
                 </div>
             </div>
         </React.Fragment>
